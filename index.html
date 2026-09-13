@@ -389,6 +389,7 @@
   }
   .sched-card h3{font-size:1.18rem;color:var(--maroon);margin-bottom:0.5rem;}
   .sched-date{font-size:1.5rem;color:var(--ink);font-weight:700;margin-bottom:0.35rem;}
+  .sched-time{font-size:1.15rem;color:var(--maroon);font-weight:700;margin-bottom:0.45rem;}
   .sched-card p{color:var(--ink-soft);font-size:0.95rem;line-height:1.6;}
 
   .timetable{
@@ -455,6 +456,36 @@
   }
   .gcard:hover img{transform:translateZ(20px) scale(1.1);}
   .gcard:hover{box-shadow:0 30px 55px -14px rgba(0,0,0,0.7);}
+
+  /* ============ 2026 GALLERY ============ */
+  #gallery2026{
+    background:var(--maroon-deep);
+    border-top:1px solid rgba(212,164,55,0.18);
+  }
+  #gallery2026 .sched-head h2{color:var(--gold-light);}
+  #gallery2026 .sched-head p{color:rgba(251,241,221,0.75);}
+  .gallery-2026-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.6rem;
+    perspective:1600px;
+  }
+  .gallery-2026-grid .gcard-landscape{
+    grid-column:span 2;
+    aspect-ratio:16/9;
+  }
+  .gallery-2026-grid .gcard-landscape img{
+    object-fit:contain;
+    background:rgba(0,0,0,0.28);
+  }
+  @media (max-width:900px){
+    .gallery-2026-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-2026-grid .gcard-landscape{grid-column:span 2;aspect-ratio:16/9;}
+  }
+  @media (max-width:560px){
+    .gallery-2026-grid{grid-template-columns:1fr;}
+    .gallery-2026-grid .gcard-landscape{grid-column:span 1;aspect-ratio:4/3;}
+  }
 
   /* ============ COMMITTEE ============ */
   #committee{background:var(--cream);}
@@ -744,6 +775,7 @@
           <div class="sched-icon">🪔</div>
           <h3>गणेश स्थापना</h3>
           <div class="sched-date">सोम, १४ सप्टेंबर २०२६</div>
+          <div class="sched-time">सायंकाळी ७:००</div>
           <p>भाद्रपद शुद्ध चतुर्थी — प्राणप्रतिष्ठापना व महापूजा</p>
         </div>
         <div class="sched-card">
@@ -795,6 +827,45 @@
     </div>
   </section>
 s
+
+  <!-- ============ 2026 GALLERY ============ -->
+  <section id="gallery2026">
+    <div class="wrap">
+      <div class="sched-head reveal">
+        <div class="eyebrow" style="color:var(--gold-light)"><span style="width:26px;height:1px;background:var(--gold-light)"></span>२०२६ चे छायाचित्र दालन</div>
+        <h2>२०२६ च्या गणेशोत्सवाच्या आठवणी</h2>
+        <p>यंदाच्या गणेशोत्सवातील बाप्पांचे दर्शन आणि मंडळातील काही सुंदर क्षणचित्रे</p>
+      </div>
+
+      <div class="gallery-2026-grid reveal" id="gallery2026Grid">
+        <div class="gcard">
+          <img src="assets/gallery/2026/ganesh-2026-01.jpeg" alt="२०२६ गणेशोत्सवातील श्री गणेश" loading="lazy">
+          <div class="gcap">यंदाचा बाप्पा</div>
+        </div>
+        <div class="gcard gcard-landscape">
+          <img src="assets/gallery/2026/ganesh-2026-02.jpeg" alt="मंडळातील सदस्यांचे समूह छायाचित्र" loading="lazy">
+          <div class="gcap">मंडळातील सदस्य</div>
+        </div>
+        <div class="gcard gcard-landscape">
+          <img src="assets/gallery/2026/ganesh-2026-03.jpeg" alt="२०२६ गणेशोत्सवातील मंडप आणि सदस्य" loading="lazy">
+          <div class="gcap">गणेशोत्सवाची सजावट</div>
+        </div>
+        <div class="gcard">
+          <img src="assets/gallery/2026/ganesh-2026-04.jpeg" alt="श्री गणेश मूर्तीचे छायाचित्र" loading="lazy">
+          <div class="gcap">बाप्पांचे दर्शन</div>
+        </div>
+        <div class="gcard">
+          <img src="assets/gallery/2026/ganesh-2026-05.jpeg" alt="श्री गणेश मूर्तीचे जवळचे छायाचित्र" loading="lazy">
+          <div class="gcap">बाप्पांचे मंगलमय रूप</div>
+        </div>
+        <div class="gcard">
+          <img src="assets/gallery/2026/ganesh-2026-06.jpeg" alt="श्री गणरायाचे छायाचित्र" loading="lazy">
+          <div class="gcap">श्री गणराय</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ VENUE ============ -->
   <section id="venue">
     <div class="wrap venue-grid">
