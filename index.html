@@ -487,6 +487,55 @@
     .gallery-2026-grid .gcard-landscape{grid-column:span 1;aspect-ratio:4/3;}
   }
 
+
+  /* ============ 2026 VIDEOS ============ */
+  #videos2026{
+    background:var(--maroon-deep);
+    border-top:1px solid rgba(212,164,55,0.18);
+  }
+  #videos2026 .sched-head h2{color:var(--gold-light);}
+  #videos2026 .sched-head p{color:rgba(251,241,221,0.75);}
+  .video-2026-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1.6rem;
+    align-items:start;
+  }
+  .video-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    background:#1d0509;
+    border:1px solid rgba(212,164,55,0.42);
+    box-shadow:0 20px 40px -16px rgba(0,0,0,0.58);
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .video-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 28px 52px -16px rgba(0,0,0,0.72);
+    border-color:rgba(243,212,126,0.72);
+  }
+  .video-card video{
+    width:100%;
+    aspect-ratio:9/16;
+    display:block;
+    object-fit:cover;
+    background:#000;
+  }
+  .video-cap{
+    padding:0.85rem 1rem 0.95rem;
+    color:var(--gold-light);
+    text-align:center;
+    font-family:'Tiro Devanagari Marathi',serif;
+    font-size:1rem;
+  }
+  @media (max-width:900px){
+    .video-2026-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  }
+  @media (max-width:560px){
+    .video-2026-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto;}
+  }
+
   /* ============ COMMITTEE ============ */
   #committee{background:var(--cream);}
   .committee-grid{
@@ -861,6 +910,42 @@ s
         <div class="gcard">
           <img src="assets/gallery/2026/ganesh-2026-06.jpeg" alt="श्री गणरायाचे छायाचित्र" loading="lazy">
           <div class="gcap">श्री गणराय</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ 2026 VIDEOS ============ -->
+  <section id="videos2026">
+    <div class="wrap">
+      <div class="sched-head reveal">
+        <div class="eyebrow" style="color:var(--gold-light)"><span style="width:26px;height:1px;background:var(--gold-light)"></span>२०२६ चे व्हिडिओ दालन</div>
+        <h2>२०२६ गणेशोत्सवातील व्हिडिओ</h2>
+        <p>यंदाच्या गणेशोत्सवातील काही सुंदर क्षण व्हिडिओमधून</p>
+      </div>
+
+      <div class="video-2026-grid reveal" id="video2026Grid">
+        <div class="video-card">
+          <video controls playsinline preload="metadata" poster="assets/videos/2026/ganesh-2026-video-01.jpg" aria-label="२०२६ गणेशोत्सवातील व्हिडिओ १">
+            <source src="assets/videos/2026/ganesh-2026-video-01.mp4" type="video/mp4">
+            आपला ब्राउझर व्हिडिओ प्ले करण्यास समर्थन देत नाही.
+          </video>
+          <div class="video-cap">गणेशोत्सवातील सुंदर क्षण</div>
+        </div>
+        <div class="video-card">
+          <video controls playsinline preload="metadata" poster="assets/videos/2026/ganesh-2026-video-02.jpg" aria-label="२०२६ गणेशोत्सवातील व्हिडिओ २">
+            <source src="assets/videos/2026/ganesh-2026-video-02.mp4" type="video/mp4">
+            आपला ब्राउझर व्हिडिओ प्ले करण्यास समर्थन देत नाही.
+          </video>
+          <div class="video-cap">बाप्पांच्या आगमनाचे क्षण</div>
+        </div>
+        <div class="video-card">
+          <video controls playsinline preload="metadata" poster="assets/videos/2026/ganesh-2026-video-03.jpg" aria-label="२०२६ गणेशोत्सवातील व्हिडिओ ३">
+            <source src="assets/videos/2026/ganesh-2026-video-03.mp4" type="video/mp4">
+            आपला ब्राउझर व्हिडिओ प्ले करण्यास समर्थन देत नाही.
+          </video>
+          <div class="video-cap">गणरायाचे मंगलमय दर्शन</div>
         </div>
       </div>
     </div>
